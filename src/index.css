@@ -1,0 +1,89 @@
+:root {
+  /* HSL Color Palette - Dark Mode Focus but with Light Mode support possibility */
+  
+  /* Primary Brand Color (Saffron/Orange for Bhandara theme but modern) */
+  --primary-h: 25;
+  --primary-s: 90%;
+  --primary-l: 50%;
+  --color-primary: hsl(var(--primary-h), var(--primary-s), var(--primary-l));
+  --color-primary-hover: hsl(var(--primary-h), var(--primary-s), 45%);
+  --color-primary-light: hsl(var(--primary-h), var(--primary-s), 95%);
+
+  /* Backgrounds */
+  --bg-h: 240;
+  --bg-s: 10%;
+  --bg-l: 10%; /* Dark layout */
+  --color-bg: hsl(var(--bg-h), var(--bg-s), var(--bg-l));
+  --color-surface: hsl(var(--bg-h), var(--bg-s), 15%);
+  --color-surface-hover: hsl(var(--bg-h), var(--bg-s), 20%);
+  
+  /* Text */
+  --color-text-main: hsl(0, 0%, 95%);
+  --color-text-muted: hsl(240, 5%, 65%);
+
+  /* Status */
+  --color-success: hsl(140, 60%, 50%);
+  --color-danger: hsl(0, 70%, 50%);
+  --color-warning: hsl(40, 90%, 60%);
+
+  /* Dimensions & Spacing */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.3);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.3);
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface-hover);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
